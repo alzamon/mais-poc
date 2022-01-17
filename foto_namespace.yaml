@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: foto
+  resourceVersion: '67948'
+  selfLink: /api/v1/namespaces/foto
+spec:
+  finalizers:
+    - kubernetes
+status:
+  phase: Active

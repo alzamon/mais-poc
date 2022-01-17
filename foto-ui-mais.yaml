@@ -1,0 +1,33 @@
+apiVersion: nais.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    team: foto
+  name: foto-ui
+  namespace: foto
+spec:
+  image: europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui
+  ingresses:
+    - 'https://foto-ui.mattilsy.net'
+  liveness:
+    initialDelay: 10
+    path: /
+    port: 8080
+    timeout: 60
+  readiness:
+    initialDelay: 10
+    path: /
+    port: 8080
+    timeout: 60
+  replicas:
+    max: 1
+    min: 1
+  resources:
+    limits:
+      cpu: 100m
+      memory: 32Mi
+    requests:
+      cpu: 100m
+      memory: 32Mi
+  skipCaBundle: true
+
