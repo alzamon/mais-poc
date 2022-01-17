@@ -17,3 +17,5 @@ Midlertidig repo for POC Mattilsynet i gke med Navs Nais.
 * Sette opp github-actions for en av applikasjonene?
 * Kartlegge hvor enkelt/vanskelig det er å åpne "tunnel" til en MATS instans?
 * Skal dette være en stor "lift and shift" eller skal vi si "nye tjenester rulles ut her og gradvis migreres også gamle"?
+* Gå gjennom infrastruktur stacken vår å se hva vi kan rydde bort etter migrering
+* Noen tanker om keycloak? Skal vi nå direkte autentisere mot AzureAD eller fremdeles host'e en keycloak-server?
