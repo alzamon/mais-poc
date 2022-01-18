@@ -18,7 +18,7 @@ ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
           path: /api
           strip: /api
 ```
-Må finne ut hvordan vi evt. løser same-origin issue. (Satser på strip i ui-backend nais støtter path)
+Må finne ut hvordan vi evt. løser same-origin issue. (Løst: Satser på strip i ui-backend nais støtter path)
 * Ønsker gjennomgang av access policy, tokenX setup for å la tjenester snakke sammen
 * Litt vanskelig å vite hva fra [nais dokumentasjonen](https://doc.nais.io) som fungerer i vårt POC-cluster.
 
