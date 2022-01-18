@@ -18,4 +18,4 @@ Midlertidig repo for POC Mattilsynet i gke med Navs Nais.
 * Kartlegge hvor enkelt/vanskelig det er å åpne "tunnel" til en MATS instans?
 * Skal dette være en stor "lift and shift" eller skal vi si "nye tjenester rulles ut her og gradvis migreres også gamle"?
 * Gå gjennom infrastruktur stacken vår å se hva vi kan rydde bort etter migrering
-* Noen tanker om keycloak? Skal vi nå direkte autentisere mot AzureAD eller fremdeles host'e en keycloak-server?
+* Tror det vil være av interesse å utfase keycloak og bruke Azure AD og [Access Policy](https://doc.nais.io/security/auth/azure-ad/access-policy/index.html) isteden.
