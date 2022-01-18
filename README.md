@@ -30,4 +30,5 @@ Må finne ut hvordan vi evt. løser same-origin issue.
 * Skal dette være en stor "lift and shift" eller skal vi si "nye tjenester rulles ut her og gradvis migreres også gamle"?
 * Gå gjennom infrastruktur stacken vår å se hva vi kan rydde bort etter migrering
 * Tror det vil være av interesse å utfase keycloak og bruke Azure AD og [Access Policy](https://doc.nais.io/security/auth/azure-ad/access-policy/index.html) isteden.
+* Hva må vi sette opp i Azure AD for å kunne sette opp frontend [the nais way](https://github.com/navikt/permitteringsportal/blob/main/src/app/api/client.ts)
 * Vi bruker også unleash
