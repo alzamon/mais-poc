@@ -19,7 +19,7 @@ ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
           strip: /api
 ```
 Må finne ut hvordan vi evt. løser same-origin issue.
-* Ønsker gjennomgang av access policy setup for å la tjenester snakke sammen
+* Ønsker gjennomgang av access policy, tokenX setup for å la tjenester snakke sammen
 * Litt vanskelig å vite hva fra [nais dokumentasjonen](https://doc.nais.io) som fungerer i vårt POC-cluster.
 
 ## Planer videre
