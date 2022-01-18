@@ -24,7 +24,7 @@ Må finne ut hvordan vi evt. løser same-origin issue. (Satser på strip i ui-ba
 
 ## Planer videre
 * Gjøre samme for `foto-ui-backend` og `bilde-api` som vi har gjort for `foto-ui`, for å prøve bruk av 
-`nais.yaml`-filer for andre typer applikasjoner, og se dem snakke med hvertandre.
+`nais.yaml`-filer for andre typer applikasjoner, og se dem snakke med hverandre.
 * Sette opp github-actions for en av applikasjonene?
 * Kartlegge hvor enkelt/vanskelig det er å åpne "tunnel" til en MATS instans?
 * Skal dette være en stor "lift and shift" eller skal vi si "nye tjenester rulles ut her og gradvis migreres også gamle"?
