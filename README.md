@@ -32,3 +32,6 @@ Må finne ut hvordan vi evt. løser same-origin issue. (Satser på strip i ui-ba
 * Tror det vil være av interesse å utfase keycloak og bruke Azure AD og [Access Policy](https://doc.nais.io/security/auth/azure-ad/access-policy/index.html) isteden.
 * Hva må vi sette opp i Azure AD for å kunne sette opp frontend [the nais way](https://github.com/navikt/permitteringsportal/blob/main/src/app/api/client.ts)
 * Vi bruker også unleash
+* Teste stackdriver for logging
+* prometheus og grafana inn i clusteret
+* Teste Artifact Registry mer for å ...
