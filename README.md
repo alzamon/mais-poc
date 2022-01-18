@@ -2,14 +2,22 @@
 Midlertidig repo for POC Mattilsynet i gke med Navs Nais. 
 
 ## Hva har vi gjort foreløpig?
- * Satt opp gke-cluster med naiserator-operatoren
-   og videre oppsett.
- * Rullet ut to eksempel frontend applikasjoner.
- * Enabled Google Artifact Registry og lastet opp 
-   foto-ui docker image.
- * Tilpasset eksempel frontend applikasjon til en 
-   ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
+* Satt opp gke-cluster med naiserator-operatoren
+og videre oppsett.
+* Rullet ut to eksempel frontend applikasjoner.
+* Enabled Google Artifact Registry og lastet opp 
+foto-ui docker image.
+* Tilpasset eksempel frontend applikasjon til en 
+ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
 
+## Bumps on the road
+* Vi har ingresser med path og strip 
+```    ingress:
+      routes:
+        - host: foto.utv.k8s.mattilsynet.no
+          path: /api
+          strip: /api
+```
 
 ## Planer videre
 * Gjøre samme for `foto-ui-backend` og `bilde-api` som vi har gjort for `foto-ui`, for å prøve bruk av 
