@@ -27,3 +27,4 @@ ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
 * Skal dette være en stor "lift and shift" eller skal vi si "nye tjenester rulles ut her og gradvis migreres også gamle"?
 * Gå gjennom infrastruktur stacken vår å se hva vi kan rydde bort etter migrering
 * Tror det vil være av interesse å utfase keycloak og bruke Azure AD og [Access Policy](https://doc.nais.io/security/auth/azure-ad/access-policy/index.html) isteden.
+* Vi bruker også unleash
