@@ -34,4 +34,4 @@ Må finne ut hvordan vi evt. løser same-origin issue. (Satser på strip i ui-ba
 * Vi bruker også unleash
 * Teste stackdriver for logging
 * prometheus og grafana inn i clusteret
-* Teste Artifact Registry mer for å ...
+* Teste Artifact Registry mer for å vite mer om det er noe å satse på
