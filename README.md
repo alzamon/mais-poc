@@ -18,6 +18,7 @@ ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
           path: /api
           strip: /api
 ```
+* Ønsker gjennomgang av access policy setup for å la tjenester snakke sammen
 
 ## Planer videre
 * Gjøre samme for `foto-ui-backend` og `bilde-api` som vi har gjort for `foto-ui`, for å prøve bruk av 
