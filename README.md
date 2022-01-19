@@ -20,7 +20,7 @@ ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
 ```
 Må finne ut hvordan vi evt. løser same-origin issue. (Løst: Satser på strip i ui-backend nais støtter path)
 * Litt vanskelig å vite hva fra [nais dokumentasjonen](https://doc.nais.io) som fungerer i vårt POC-cluster. (Løst: Jeg hadde oversett [denne oversikten]( https://docs.google.com/document/d/1tlfnwvf9UYGH_-VGkXnCcC8YAF6kqYmja_oD4xsDccc/edit))
-* Issue med envsubst i nginx-
+* Issue med envsubst i [nginx-unpriviledged](https://hub.docker.com/r/nginxinc/nginx-unprivileged)
 
 ## Planer videre
 * Gjøre samme for `foto-ui-backend` og `bilde-api` som vi har gjort for `foto-ui`, for å prøve bruk av 
