@@ -6,7 +6,7 @@ metadata:
   name: foto-ui-backend
   namespace: foto
 spec:
-  image: europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.2.0
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.3.0'
   ingresses:
     - 'https://foto-ui.mattilsy.net/api'
   liveness:

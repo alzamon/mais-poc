@@ -6,17 +6,17 @@ metadata:
   name: foto-ui
   namespace: foto
 spec:
-  image: europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui:0.1.0
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui:0.4.0'
   ingresses:
     - 'https://foto-ui.mattilsy.net'
   liveness:
     initialDelay: 10
-    path: /
+    path: /config.json
     port: 8080
     timeout: 60
   readiness:
     initialDelay: 10
-    path: /
+    path: /config.json
     port: 8080
     timeout: 60
   replicas:
@@ -30,4 +30,3 @@ spec:
       cpu: 100m
       memory: 32Mi
   skipCaBundle: true
-
