@@ -6,7 +6,10 @@ metadata:
   name: foto-ui
   namespace: foto
 spec:
-  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui:0.4.0'
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui:0.11.0'
+  env:
+    - name: APP_ENV
+      value: utv
   ingresses:
     - 'https://foto-ui.mattilsy.net'
   liveness:
