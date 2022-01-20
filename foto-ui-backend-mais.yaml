@@ -10,6 +10,8 @@ spec:
   env:
     - name: SPRING_PROFILES_ACTIVE
       value: utv
+    - name: BILDE_API_URL
+      value: http://bilde-api.foto
   ingresses:
     - 'https://foto-ui.mattilsy.net/api'
   liveness:
