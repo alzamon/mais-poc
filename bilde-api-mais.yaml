@@ -3,10 +3,10 @@ kind: Application
 metadata:
   labels:
     team: foto
-  name: foto-ui-backend
+  name: bilde-api
   namespace: foto
 spec:
-  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.3.0'
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.1.0'
   env:
     - name: SPRING_PROFILES_ACTIVE
       value: utv
@@ -14,8 +14,6 @@ spec:
       value: http://bilde-api.foto
     - name: USER_METRICS_USER_SALT
       value: "1111111111111111111111"
-  ingresses:
-    - 'https://foto-ui.mattilsy.net/api'
   liveness:
     initialDelay: 10
     path: /actuator/health
