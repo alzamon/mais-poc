@@ -6,7 +6,11 @@ metadata:
   name: foto-ui-backend
   namespace: foto
 spec:
-  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.3.0'
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.4.0'
+  accessPolicy:
+    outbound:
+      rules:
+        - application: bilde-api
   env:
     - name: SPRING_PROFILES_ACTIVE
       value: utv

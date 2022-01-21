@@ -6,14 +6,23 @@ metadata:
   name: bilde-api
   namespace: foto
 spec:
-  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/foto-ui-backend:0.1.0'
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/bilde-api:0.2.0'
+  accessPolicy:
+    inbound:
+      rules:
+        - application: foto-ui-backend
+  gcp:
+    buckets:
+    - name: foto-bilde-api
+    sqlInstances:
+      - name: bilde-api
+        type: POSTGRES_12
+        databases:
+          - name: bilde-api-db
+            envVarPrefix: DATABASE          
   env:
     - name: SPRING_PROFILES_ACTIVE
-      value: utv
-    - name: BILDE_API_URL
-      value: http://bilde-api.foto
-    - name: USER_METRICS_USER_SALT
-      value: "1111111111111111111111"
+      value: dev
     - name: IMAGE_HOMEDIR
       value: "/tmp"
   liveness:
@@ -31,9 +40,9 @@ spec:
     min: 1
   resources:
     limits:
-      cpu: '1'
-      memory: 600Mi
+      cpu: '2'
+      memory: 1200Mi
     requests:
-      cpu: 100m
-      memory: 600Mi
+      cpu: 150m
+      memory: 1000Mi
   skipCaBundle: true
