@@ -11,7 +11,11 @@ foto-ui docker image.
 ny applikasjon [foto-ui-mais.yaml](./foto-ui-mais.yaml).
 
 ## Bumps on the road
-* Issue med envsubst i [nginx-unpriviledged](https://hub.docker.com/r/nginxinc/nginx-unprivileged). Vi bruker den for å skille hvilken keycloak-instans vi går på i forskjellige miljøer.
+* Issue med envsubst i [nginx-unpriviledged](https://hub.docker.com/r/nginxinc/nginx-unprivileged). Vi bruker den for å skille hvilken keycloak-instans vi går på i forskjellige miljøer, dette er forårsaket av at pods i nais kjører med en restriktiv security context.
+
+Poddene i nais har ikke tilgang til å skrive til filsystem, utenfor `/tmp`. Denne ha kan ha konsekvenser på begge applikasjoner, og tjenester som vi bruker idag, eg. nginx bruker `envsubst`, for å erstatte `${}` placeholders med miljø variabler, og skrive outputten til `/etc/nginx`. Vi implementert en midlertidig fiks, som endrer nginx imagen `CMD` til `-c /tmp/nginx`, slik at den skriver til, og leser fra `/tmp`.
+
+En annen løsning kan være at vi reimplementerer alle funksjonalitet som krever skriving til disk som en initContainer, som kjører uten securityContext (tillater nais denne?).
 
 Se også [bumps fra tidligere møter](./bumps_vi_har_diskutert).
 
