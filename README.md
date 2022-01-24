@@ -45,3 +45,21 @@ av rulles ut på gammel-måten enten i gke-clusteret eller at on-prem convertere
 
 Så blir migrering og rydding i infrastruktur en gradvis prossess etter dette.
 
+## Tanker fra Norbert
+
+Min største bekymring er at Mattilsynet vil ha å takle 2 store problemer samtidig:
+
+1. Forbered skyinfrastrukturen
+2. Tilpass alle applikasjoner og miljøer, slik at de kan kjøre på Nais
+
+Jeg tror Nais dekker noe del av punkt 1, fordi den kan provisjonere noe sky tjenester, men kanskje ikke alt. Jeg er også litt bekymret av at Mattilsynet blir vendor locked in til GCP og Nais.
+
+Jeg er enig med Asgeir at den ser ut som en bra platform for Mattilsynet sine applikasjoner, men jeg tror vi trenger mer undersøking om:
+
+* Hvordan kan vi endre våre 4 miljøer til 2
+* Hvordan kan vi kjøre infrastruktur tjenester som er ikke tilbudt av Nais, og hvordan kan de koble til Nais applikasjoner
+* Hva skjer hvis en applikasjon trenger en spesifikk versjon av en tjeneste som Nais tilbyr? Eg. en applikasjon krever Postgres X, men alle andre trenger Postgres Y.
+* Hva er processen hvis vi trenger en feature fra k8s, eller en avhengige tjeneste, som Nais ikke støtter? Vil Nav ha ressurser til å betjene Mattilsynet spesifikke ønsker?
+* Hvor mye tilpassing vi vil ha å gjøre på våre applikasjoner/byggeprosesser? Jeg refererer til nginx problemet, og traefik prefix strip.
+
+Før vi forplikter oss til det.
