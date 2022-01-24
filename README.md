@@ -32,3 +32,16 @@ Se også [bumps fra tidligere møter](./bumps_vi_har_diskutert).
 * Teste stackdriver for logging
 * prometheus og grafana inn i clusteret
 * Teste Artifact Registry mer for å vite mer om det er noe å satse på
+
+## Oppsummering Asgeir
+Nais virker som en god match for våre applikasjoner. Men det er noen punkter som vil være mer tidkrevende og en modningsprossess. 
+ * Komme inn i en flyt der vi bare har et "ikke-prod" miljø.
+ * Migrere infrastruktur-komponenter (de som ikke automatisk tilbys)
+ * Prossesser knyttet til sammarbeid/kommunikasjon/opplæring mellom Nav og Mattilsynet 
+
+Jeg synes migrering til Nais virker som en god idé, men forslår å definere fase en til å være utrulling av applikasjonene med 
+minimale endringer for å passe med Nais. De rulles ut med jenkins slik som tidligere. Infrastrukturkomponenter de er avhengige 
+av rulles ut på gammel-måten enten i gke-clusteret eller at on-prem converteres til å være kun et infrastruktur-cluster.
+
+Så blir migrering og rydding i infrastruktur en gradvis prossess etter dette.
+
