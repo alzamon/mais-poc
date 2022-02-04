@@ -6,7 +6,7 @@ metadata:
   name: bilde-api
   namespace: foto
 spec:
-  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/bilde-api:0.2.0'
+  image: 'europe-north1-docker.pkg.dev/nais-337909/nais-poc/bilde-api:0.12.0'
   accessPolicy:
     inbound:
       rules:
@@ -22,19 +22,11 @@ spec:
             envVarPrefix: DATABASE          
   env:
     - name: SPRING_PROFILES_ACTIVE
-      value: dev
+      value: utv
     - name: IMAGE_HOMEDIR
-      value: "/tmp"
-  liveness:
-    initialDelay: 10
-    path: /actuator/health
-    port: 8081
-    timeout: 60
-  readiness:
-    initialDelay: 10
-    path: /actuator/health
-    port: 8081
-    timeout: 60
+      value: /tmp
+  envFrom:
+    - secret: google-sql-bilde-api
   replicas:
     max: 1
     min: 1
